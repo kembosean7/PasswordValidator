@@ -5,7 +5,7 @@ import org.example.validatePassword;
 
 public class testPassword {
     @Test
-    public void testValidPassowrd(){
+    public void testValidPassword(){
 
         validatePassword validatePassword = new validatePassword();
         boolean output1 = validatePassword.isPasswordSecure("biggieP7$");
