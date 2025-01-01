@@ -44,6 +44,7 @@ public class testPassword {
 
     @Test
     public void testUpperCase(){
+
         validatePassword validatePassword =new validatePassword();
         boolean output1 = validatePassword.isPasswordSecure("cjTaona7@");
         boolean output2 = validatePassword.isPasswordSecure("official89#");
@@ -55,12 +56,25 @@ public class testPassword {
 
     @Test
     public void testLowerCase(){
+
         validatePassword validatePassword =new validatePassword();
         boolean output1 = validatePassword.isPasswordSecure("TAONA@1234");
         boolean output2 = validatePassword.isPasswordSecure("Official89$");
 
         assertFalse(output1);
         assertTrue(output2);
+    }
+
+    @Test
+    public void testLength(){
+
+        validatePassword validatePassword =new validatePassword();
+        boolean output1 = validatePassword.isPasswordSecure("Taku@1234");
+        boolean output2 = validatePassword.isPasswordSecure("Ofc89$");
+
+        assertTrue(output1);
+        assertFalse(output2);
+
     }
 
 }
