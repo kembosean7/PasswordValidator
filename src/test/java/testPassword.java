@@ -19,7 +19,7 @@ public class testPassword {
     }
 
     @Test
-    public void testInvalidPassword(){
+    public void testInvalidPassword() {
         validatePassword validatePassword = new validatePassword();
         boolean output1 = validatePassword.isPasswordSecure("         ");
         boolean output2 = validatePassword.isPasswordSecure("Sk7prince");
@@ -28,6 +28,19 @@ public class testPassword {
         assertFalse(output1);
         assertFalse(output2);
         assertFalse(output3);
-}
+    }
+
+    @Test
+    public void testSpecialChar(){
+
+        validatePassword validatePassword =new validatePassword();
+        boolean output1 = validatePassword.isPasswordSecure("Kembotadiwa7@");
+        boolean output2 = validatePassword.isPasswordSecure("Sk7prince");
+        boolean output3 = validatePassword.isPasswordSecure("Official89#");
+
+        assertTrue(output1);
+        assertFalse(output2);
+        assertTrue(output3);
+    }
 
 }
