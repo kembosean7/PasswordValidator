@@ -23,14 +23,17 @@ public class validatePassword {
             if(Character.isUpperCase(c)){
                 hasUpper = true;
             }
+            if(Character.isDigit(c)){
+                hasDigit = true;
+            }
         }
 
-        return length && hasLower;
+        return length && hasLower && hasUpper && hasDigit;
     }
 
     public static void main(String[] args){
         validatePassword validatePassword = new validatePassword();
-        System.out.println(validatePassword.isPasswordSecure("sdfghjkjhgfd"));
+        System.out.println(validatePassword.isPasswordSecure("sdfghjkW2jhgfd"));
     }
 }
 
