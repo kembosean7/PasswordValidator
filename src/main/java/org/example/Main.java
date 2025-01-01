@@ -5,6 +5,8 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Welcome to come PasswordValidator");
+        validatePassword validatePassword = new validatePassword();
+        boolean output = validatePassword.isPasswordSecure("seaS2425_n");
+        System.out.println(output);
     }
 }
