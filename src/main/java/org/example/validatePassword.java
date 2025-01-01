@@ -20,7 +20,9 @@ public class validatePassword {
             if(Character.isLowerCase(c)){
                 hasLower = true;
             }
-
+            if(Character.isUpperCase(c)){
+                hasUpper = true;
+            }
         }
 
         return length && hasLower;
@@ -28,7 +30,7 @@ public class validatePassword {
 
     public static void main(String[] args){
         validatePassword validatePassword = new validatePassword();
-        System.out.println(validatePassword.isPasswordSecure("QWERTYUI[;LKJHGFu"));
+        System.out.println(validatePassword.isPasswordSecure("sdfghjkjhgfd"));
     }
 }
 
