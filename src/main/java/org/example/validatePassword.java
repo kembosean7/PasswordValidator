@@ -26,14 +26,17 @@ public class validatePassword {
             if(Character.isDigit(c)){
                 hasDigit = true;
             }
+            if(!Character.isLetterOrDigit(c)){
+                hasSpecial =  true;
+            }
         }
 
-        return length && hasLower && hasUpper && hasDigit;
+        return length && hasLower && hasUpper  && hasDigit && hasSpecial;
     }
 
     public static void main(String[] args){
         validatePassword validatePassword = new validatePassword();
-        System.out.println(validatePassword.isPasswordSecure("sdfghjkW2jhgfd"));
+        System.out.println(validatePassword.isPasswordSecure("sdfghjkW2jhgfd +"));
     }
 }
 
