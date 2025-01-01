@@ -4,7 +4,6 @@ import org.example.validatePassword;
 
 
 public class testPassword {
-
     @Test
     public void testValidPassowrd(){
 
@@ -41,6 +40,18 @@ public class testPassword {
         assertTrue(output1);
         assertFalse(output2);
         assertTrue(output3);
+    }
+
+    @Test
+    public void testUpperCase(){
+        validatePassword validatePassword =new validatePassword();
+        boolean output1 = validatePassword.isPasswordSecure("cjTaona7@");
+        boolean output2 = validatePassword.isPasswordSecure("official89#");
+
+        assertTrue(output1);
+        assertFalse(output2);
+
+
     }
 
 }
